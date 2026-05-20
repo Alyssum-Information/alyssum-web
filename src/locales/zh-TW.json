@@ -1,0 +1,176 @@
+{
+  "site": {
+    "name": "Alyssum Information Co., Ltd.",
+    "shortName": "Alyssum",
+    "tagline": "Where Sophisticated Technology Meets Elegant Engineering.",
+    "navigation": {
+      "home": "首頁",
+      "services": "核心服務",
+      "cases": "案例實績",
+      "about": "關於我們",
+      "contact": "聯絡諮詢"
+    },
+    "cta": {
+      "bookDiagnosis": "預約免費 AI 診斷",
+      "exploreCases": "查看案例",
+      "consultation": "預約 30 分鐘諮詢"
+    },
+    "trustBadges": {
+      "ntu": "國立臺灣藝術大學合作夥伴",
+      "ceh": "EC-Council CEH 資安專業",
+      "enterprise": "企業級 AI 導入顧問",
+      "cti": "LitCTI 在地化威脅情資"
+    },
+    "footer": {
+      "description": "以優雅與可信任為核心，協助企業導入 AI、資安治理與可擴展的數位系統。",
+      "copyright": "© {year} Alyssum Information Co., Ltd. All rights reserved."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Where Sophisticated Technology Meets Elegant Engineering.",
+      "subtitle": "量身打造企業級 AI 知識庫、高端資安顧問與可擴展全端系統，讓技術真正轉化為可衡量的商業成果。"
+    },
+    "sections": {
+      "trustTitle": "企業信任里程碑",
+      "servicesTitle": "三大核心能力"
+    },
+    "services": {
+      "rag": {
+        "title": "企業知識庫整合",
+        "description": "安全地把內部文件、流程與知識轉換為可查詢、可追溯、低幻覺風險的 AI 工作流。"
+      },
+      "training": {
+        "title": "AI 顧問與企業培訓",
+        "description": "提供從管理層到實作團隊的完整訓練，縮短導入成本並提升跨部門協作效率。"
+      },
+      "security": {
+        "title": "資安顧問與 LitCTI",
+        "description": "以 CEH 專業結合威脅情資解析，建立企業可持續的防禦能力與稽核準備度。"
+      }
+    }
+  },
+  "services": {
+    "title": "核心服務",
+    "subtitle": "我們將複雜技術拆解為可執行、可驗證、可交付的企業方案。",
+    "items": {
+      "rag": {
+        "title": "Enterprise Knowledge Base Integration",
+        "valueTitle": "價值主張",
+        "value": "支援地端或安全雲端 LLM 整合，保護敏感資料、降低 AI 幻覺，並加速企業內部知識流通。",
+        "audienceTitle": "適用對象",
+        "audience": "中大型企業、醫療體系與學研機構。"
+      },
+      "training": {
+        "title": "AI Consulting & Corporate Training",
+        "valueTitle": "價值主張",
+        "value": "提供 AI 生產力工具工作坊與企業 AI 資安意識訓練，打造可複製的組織學習能力。",
+        "audienceTitle": "適用對象",
+        "audience": "欲建立內部 AI 能力與治理流程的企業團隊。"
+      },
+      "security": {
+        "title": "Cybersecurity Consulting & LitCTI SaaS",
+        "valueTitle": "價值主張",
+        "value": "由 CEH 專業顧問執行風險評估、威脅情資解析，強化實務防禦與決策速度。",
+        "audienceTitle": "適用對象",
+        "audience": "重視法遵、稽核與關鍵基礎設施安全的企業。"
+      }
+    }
+  },
+  "cases": {
+    "title": "案例實績",
+    "subtitle": "以可量化成果建立企業信任，從資料治理到流量增長、從資安合規到 AI 內容商業化。",
+    "scope": "專案範疇",
+    "solution": "我們的解法",
+    "impact": "商業影響",
+    "items": {
+      "case1": {
+        "title": "大型教育機構｜自動化網頁爬蟲與 AI 知識庫整併",
+        "scope": "盤點近 100,000 筆分散於不同行政單位與舊系統的網頁與文件資產，以串接 LLM 模型進行知識庫建置。",
+        "solution": "建立企業級爬蟲與資料管線，自動列舉、爬取與稽核，並將 PDF、DOCX、XLSX、HTML 等異質資料轉換為可供 LLM 匯入的統一格式。",
+        "impact": "完整描繪機構數位資產，將大量非結構化文件轉為可上線的高安全 AI 資料基礎。"
+      },
+      "case2": {
+        "title": "遊戲攻略平台｜SEO 霸榜與 AdSense 獲利引擎",
+        "scope": "針對關鍵字建立可持續成長的自然流量策略與廣告變現能力。",
+        "solution": "導入技術 SEO 架構，優化頁速、語意化 HTML、Schema Markup 與行動優先版型，全面滿足 Core Web Vitals。",
+        "impact": "取得關鍵字 Google 自然搜尋第一名，並通過 AdSense 審核，建立穩定被動收益。"
+      },
+      "case3": {
+        "title": "企業基礎設施與資安｜政府與金融作業系統合規顧問",
+        "scope": "針對 RHEL、SLES、IBM AIX 等關鍵系統進行加固、基線設定與專業資安評估。",
+        "solution": "依據 TWGCB、FCB、CIS Benchmarks 制定並落地系統優化藍圖，涵蓋設定治理、弱點風險與稽核流程。",
+        "impact": "顯著降低系統風險並協助客戶通過金融與機構第三方稽核。"
+      },
+      "case4": {
+        "title": "AI 多媒體創作｜客製語音有聲書與手遊美術投放",
+        "scope": "以 AI 生成技術支援商業內容生產，驗證市場可行性與規模化交付。",
+        "solution": "建置客製語音合成流程打造高品質有聲書，並設計 AI 輔助美術管線產出手遊宣傳素材與角色變體。",
+        "impact": "有聲書成功上架並登上通路暢銷第一名，同時大幅降低創意製作成本與交付週期。"
+      }
+    }
+  },
+  "about": {
+    "title": "關於 Alyssum",
+    "philosophyTitle": "Alyssum 命名哲學",
+    "philosophyDescription": "Alyssum 象徵細緻、純淨且群聚綻放的力量。我們相信軟體工程不只追求效率，更應兼具美感、秩序與對人的理解。",
+    "founderTitle": "創辦人與技術背景",
+    "founderDescription": "結合多年全端工程經驗、EC-Council CEH 資安專業與教學實務，專注協助企業在風險可控前提下快速落地 AI 與資安治理。"
+  },
+  "contact": {
+    "title": "聯絡與商機諮詢",
+    "subtitle": "免費 30 分鐘 AI 與資安準備度諮詢",
+    "description": "請留下需求，我們會在確認後提供建議方向與初步實作路線。若您希望最快速啟動，亦可直接前往 Google 表單提交。",
+    "form": {
+      "name": "姓名",
+      "email": "企業 Email",
+      "company": "公司名稱",
+      "budget": "預算區間",
+      "need": "主要需求",
+      "submit": "送出需求",
+      "directForm": "改用 Google 表單填寫",
+      "submitted": "資料驗證完成，已為您開啟諮詢表單。"
+    },
+    "budgetOptions": {
+      "option1": "50 萬以下",
+      "option2": "50 萬 - 200 萬",
+      "option3": "200 萬 - 500 萬",
+      "option4": "500 萬以上"
+    },
+    "needOptions": {
+      "rag": "知識庫部署",
+      "security": "資安顧問",
+      "training": "企業培訓工作坊",
+      "fullstack": "全端系統開發"
+    },
+    "validation": {
+      "required": "此欄位為必填",
+      "email": "請輸入有效的企業 Email",
+      "companyEmail": "請使用公司網域 Email（避免免費信箱）"
+    }
+  },
+  "seo": {
+    "siteName": "Alyssum Information | 企業 AI 與資安顧問",
+    "defaultOgImage": "og-image.webp",
+    "home": {
+      "title": "Alyssum Information｜優雅且可信任的企業技術夥伴",
+      "description": "提供企業知識庫整合、AI 顧問培訓與資安治理服務，打造可落地、可量化的數位轉型成果。"
+    },
+    "services": {
+      "title": "核心服務｜AI 知識庫、企業培訓與資安顧問",
+      "description": "從地端安全 AI 到 CEH 專業資安顧問，Alyssum 提供完整且可執行的企業級技術方案。"
+    },
+    "cases": {
+      "title": "案例實績｜教育、流量成長、資安合規、AI 創作",
+      "description": "查看 Alyssum 如何以技術方案為客戶創造可驗證的商業成果與組織價值。"
+    },
+    "about": {
+      "title": "關於我們｜Alyssum 的工程理念與團隊背景",
+      "description": "我們將花朵般的細緻美學帶入工程流程，提供可靠、清晰、可持續的企業技術服務。"
+    },
+    "contact": {
+      "title": "聯絡諮詢｜免費 30 分鐘 AI 與資安診斷",
+      "description": "立即預約 Alyssum 免費諮詢，釐清需求、評估風險並規劃最適導入路線。"
+    }
+  }
+}

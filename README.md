@@ -1,83 +1,46 @@
-# alyssum-web
+# Alyssum Official Website
 
-Scaffolded with Vuetify CLI.
+Alyssum Information Co., Ltd. 的企業官網專案，使用 Vue 3 + Vuetify 建置，目標為展示核心服務、案例實績並導向 B2B 諮詢轉換。
 
-## ❗️ Documentation
+## 技術棧
 
-- Primary docs: https://vuetifyjs.com/
-- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
-- Community support: https://community.vuetifyjs.com/
-- Issue tracker: https://issues.vuetifyjs.com/
+- Vue 3（Composition API + `<script setup>`）
+- Vuetify
+- Vue Router（Hash History，適用 GitHub Pages）
+- Vue I18n（`zh-TW`）
+- Unhead（頁面 SEO / Open Graph）
+- pnpm
 
-## 🧱 Stack
-
-- Framework: Vue 3 + Vite
-- UI Library: Vuetify
-- Language: TypeScript
-- Package manager: pnpm
-
-## 🧭 Start Here
-
-- Main entry: `src/main.ts`
-- Main app component: `src/App.vue`
-- Main styles: `src/styles/`
-- Plugin setup: `src/plugins/`
-
-## 📁 Project Structure
-
-- `src/main.ts` — application entry point
-- `src/App.vue` — root component
-- `src/components/` — reusable Vue components
-- `src/plugins/` — plugin registration and setup
-- `src/styles/` — global styles and theme settings
-- `public/` — static public files
-
-## ✨ Enabled Features
-
-- ESLint
-- Pinia
-- Vue I18n
-- Vuetify MCP
-- Vue Router
-
-## 💿 Install
-
-Use your selected package manager (pnpm) to install dependencies:
-
-```bash
-pnpm install
-```
-
-## 🚀 Quick Start
+## 快速開始
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-## 🏗️ Build
+## 主要指令
 
-```bash
-pnpm build
-```
+- `pnpm dev`：本機開發
+- `pnpm build`：型別檢查 + 正式建置
+- `pnpm lint`：ESLint 檢查
+- `pnpm preview`：預覽建置結果
 
-## 🧪 Available Scripts
+## 環境變數
 
-- `pnpm dev`
-- `pnpm build`
-- `pnpm preview`
-- `pnpm build-only`
-- `pnpm type-check`
-- `pnpm lint`
-- `pnpm lint:fix`
-- `pnpm mcp`
-- `pnpm mcp:revert`
+請於 `.env` 或部署平台設定以下變數：
 
-## 💪 Support Vuetify Development
+- `VITE_GOOGLE_FORM_URL`：諮詢表單連結（首頁/聯絡頁 CTA）
+- `VITE_SITE_URL`：網站完整網址（SEO `og:url` 用）
+- `VITE_GTM_ID`：Google Tag Manager Container ID（例如 `GTM-XXXXXXX`）
 
-This project uses Vuetify - an MIT licensed Open Source project. We are glad to welcome contributors and any support for ongoing development:
+## 部署
 
-- Contribute to Vuetify and ecosystem projects: https://github.com/vuetifyjs
-- Request enterprise support: https://support.vuetifyjs.com/
-- Sponsor on GitHub: https://github.com/sponsors/vuetifyjs
-- Support on Open Collective: https://opencollective.com/vuetify
+- 已提供 GitHub Actions 工作流：`.github/workflows/deploy.yml`
+- push 到 `main` 分支會自動執行 `pnpm install`、`pnpm build` 並部署到 GitHub Pages
+
+## 專案結構（節錄）
+
+- `src/pages/`：首頁、服務、案例、關於、聯絡頁
+- `src/components/`：共用導覽列與頁尾
+- `src/locales/zh-TW.json`：主要文案與 i18n 字串
+- `src/composables/usePageHead.ts`：每頁 SEO meta 設定

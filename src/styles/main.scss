@@ -1,0 +1,13 @@
+body {
+  font-family: 'Noto Sans TC', 'Inter', system-ui, -apple-system, sans-serif;
+  color: rgb(var(--v-theme-textPrimary));
+  line-height: 1.6;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.page-shell {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbff 100%);
+}

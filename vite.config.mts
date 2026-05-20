@@ -4,8 +4,13 @@ import Fonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1]
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  // GitHub Pages 會發佈到 /<repository-name>/，自訂網域時請改回 '/'
+  base: isGithubActions && repositoryName ? `/${repositoryName}/` : '/',
   plugins: [
     Vue({
       template: { transformAssetUrls },
@@ -18,12 +23,15 @@ export default defineConfig({
       },
     }),
     Fonts({
-      fontsource: {
+      google: {
         families: [
           {
-            name: 'Roboto',
-            weights: [100, 300, 400, 500, 700, 900],
-            styles: ['normal', 'italic'],
+            name: 'Inter',
+            styles: 'wght@400;500;700',
+          },
+          {
+            name: 'Noto Sans TC',
+            styles: 'wght@400;500;700',
           },
         ],
       },

@@ -5,15 +5,43 @@
  */
 
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
-import Index from '@/pages/index.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import AboutPage from '@/pages/AboutPage.vue'
+import CasesPage from '@/pages/CasesPage.vue'
+import ContactPage from '@/pages/ContactPage.vue'
+import HomePage from '@/pages/index.vue'
+import ServicesPage from '@/pages/ServicesPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  scrollBehavior () {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
-      component: Index,
+      name: 'home',
+      component: HomePage,
+    },
+    {
+      path: '/services',
+      name: 'services',
+      component: ServicesPage,
+    },
+    {
+      path: '/cases',
+      name: 'cases',
+      component: CasesPage,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: AboutPage,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactPage,
     },
   ],
 })
