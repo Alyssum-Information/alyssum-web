@@ -16,8 +16,8 @@
       "consultation": "Book a 30-min Consultation"
     },
     "trustBadges": {
-      "ceh": "EC-Council CEH Certified",
-      "enterprise": "Enterprise AI Advisory",
+      "ceh": "Security Compliance Advisor",
+      "enterprise": "AI Knowledge Base Advisor",
       "fullstack": "Full-stack Engineering"
     },
     "footer": {
@@ -47,7 +47,7 @@
       "servicesTitle": "End-to-end engineering, from AI to the web",
       "servicesSubtitle": "We translate complex technology into executable, verifiable, and deliverable enterprise solutions — across the full spectrum from front-end experience to security compliance.",
       "casesEyebrow": "CASE STUDIES",
-      "casesTitle": "Client outcomes that speak for themselves",
+      "casesTitle": "Case Studies",
       "casesSubtitle": "From data governance to traffic growth, from compliance to AI-driven content commercialization — every case maps to quantifiable value.",
       "aboutEyebrow": "ABOUT US",
       "aboutTitle": "Why teams choose Alyssum",
@@ -65,8 +65,8 @@
         "tags": ["LLM Ops", "Data Pipeline"]
       },
       "aiConsulting": {
-        "title": "AI Consulting, Training & Security",
-        "subtitle": "Adoption & Compliance",
+        "title": "AI & Security Compliance Training",
+        "subtitle": "Consulting & Adoption",
         "value": "From AI productivity workshops and enterprise security-awareness training to CEH-led risk assessments and system hardening aligned with TWGCB / FCB / CIS audit standards.",
         "audience": "Teams building AI capability while staying compliant",
         "tags": ["CEH", "TWGCB", "FCB", "CIS"]
@@ -125,7 +125,7 @@
         "metrics": {
           "baselines": { "value": "3", "label": "Baselines passed" },
           "systems": { "value": "RHEL / SLES / AIX", "label": "Systems covered" },
-          "audit": { "value": "100%", "label": "Audit pass rate" }
+          "audit": { "value": "CEH", "label": "Certified consultants" }
         }
       },
       "case4": {
@@ -159,6 +159,7 @@
     "philosophyTitle": "The Alyssum philosophy",
     "philosophyDescription": "Alyssum is a tiny flower that blooms in clusters — fragrant, delicate, and quietly powerful. We believe great software shouldn't just be efficient; it should be beautiful, orderly, and deeply human — like a meadow in bloom, every detail tended with care.",
     "philosophyImageAlt": "A cluster of blooming alyssum flowers",
+    "philosophyImageCredit": "Photo by Aleksandr Kadykov on Unsplash",
     "pillarsTitle": "Three engineering beliefs",
     "pillars": {
       "elegant": {

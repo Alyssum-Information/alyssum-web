@@ -10,9 +10,10 @@
           <v-img alt="Alyssum logo" src="@/assets/logo.png" />
         </v-avatar>
 
-        <div class="d-none d-sm-block">
-          <div class="text-subtitle-1 font-weight-bold brand-name">{{ t('site.shortName') }}</div>
-          <div class="text-caption brand-sub">{{ t('site.name') }}</div>
+        <div class="d-none d-sm-flex align-baseline ga-2 brand-text">
+          <span class="text-subtitle-1 font-weight-bold brand-name">{{ t('site.shortName') }}</span>
+          <span class="brand-divider">｜</span>
+          <span class="text-caption brand-sub">{{ t('site.name') }}</span>
         </div>
       </a>
 
@@ -223,6 +224,16 @@
 .brand-sub {
   color: rgb(var(--v-theme-textSecondary));
   letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.brand-divider {
+  color: rgba(124, 78, 153, 0.45);
+  font-weight: 300;
+}
+
+.brand-text {
+  line-height: 1.2;
 }
 
 .nav-btn {

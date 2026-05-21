@@ -12,24 +12,50 @@
         </h2>
       </div>
 
-      <v-row align="center" class="ga-8">
-        <v-col cols="12" md="5">
-          <div class="philosophy-art">
-            <AlyssumFlowerArt :alt="t('about.philosophyImageAlt')" />
-          </div>
-        </v-col>
+      <article class="philosophy-card">
+        <figure class="philosophy-photo">
+          <img
+            :alt="t('about.philosophyImageAlt')"
+            loading="lazy"
+            :src="philosophyPhoto.src"
+            :srcset="philosophyPhoto.srcset"
+            sizes="(max-width: 960px) 100vw, 480px"
+          >
+          <span class="philosophy-photo-meta">
+            <v-icon icon="mdi-camera-outline" size="14" />
+            {{ t('about.philosophyImageCredit') }}
+          </span>
+          <div class="philosophy-photo-glow" />
+        </figure>
 
-        <v-col cols="12" md="7">
-          <div class="philosophy-card glass-card">
-            <v-icon class="about-card-icon" color="primary" icon="mdi-flower-tulip" size="32" />
-            <h3 class="about-card-title">{{ t('about.philosophyTitle') }}</h3>
-            <p class="about-card-text">{{ t('about.philosophyDescription') }}</p>
+        <div class="philosophy-content">
+          <span class="section-eyebrow philosophy-eyebrow">
+            <v-icon icon="mdi-flower-tulip" size="14" />
+            ALYSSUM · LOBULARIA MARITIMA
+          </span>
+
+          <h3 class="philosophy-title">{{ t('about.philosophyTitle') }}</h3>
+
+          <p class="philosophy-text">{{ t('about.philosophyDescription') }}</p>
+
+          <div class="philosophy-quote">
+            <v-icon class="philosophy-quote-icon" icon="mdi-format-quote-open" size="22" />
+            <span>{{ t('site.tagline') }}</span>
           </div>
-        </v-col>
-      </v-row>
+        </div>
+      </article>
 
       <div class="pillars-block">
-        <h3 class="pillars-title">{{ t('about.pillarsTitle') }}</h3>
+        <div class="pillars-header">
+          <h3 class="pillars-title">{{ t('about.pillarsTitle') }}</h3>
+          <div class="pillars-accent" aria-hidden="true">
+            <img
+              alt=""
+              loading="lazy"
+              :src="pillarsAccent.src"
+            >
+          </div>
+        </div>
 
         <div class="pillars-grid">
           <div
@@ -53,12 +79,27 @@
 
 <script lang="ts" setup>
   import { useI18n } from 'vue-i18n'
-  import AlyssumFlowerArt from '@/components/AlyssumFlowerArt.vue'
   import { useReveal } from '@/composables/useReveal'
   import { aboutPillars } from '@/data/site'
 
   const { t } = useI18n()
   const { el, visible } = useReveal()
+
+  // Unsplash · Aleksandr Kadykov — "white cluster flowers in close up photography"
+  // Unsplash License: free for commercial & personal use, no attribution required (credited below for courtesy)
+  const philosophyPhoto = {
+    src: 'https://images.unsplash.com/photo-1618772573306-704dc9fb96ac?w=960&q=80&auto=format&fit=crop',
+    srcset: [
+      'https://images.unsplash.com/photo-1618772573306-704dc9fb96ac?w=480&q=80&auto=format&fit=crop 480w',
+      'https://images.unsplash.com/photo-1618772573306-704dc9fb96ac?w=720&q=80&auto=format&fit=crop 720w',
+      'https://images.unsplash.com/photo-1618772573306-704dc9fb96ac?w=960&q=80&auto=format&fit=crop 960w',
+    ].join(', '),
+  }
+
+  // Unsplash · Annie Gavin — "a bunch of white flowers with green leaves"
+  const pillarsAccent = {
+    src: 'https://images.unsplash.com/photo-1632261462778-2389b26c1ad9?w=320&q=70&auto=format&fit=crop',
+  }
 </script>
 
 <style scoped>
@@ -73,40 +114,137 @@
   margin-bottom: 48px;
 }
 
-.philosophy-art {
-  max-width: 360px;
-  margin: 0 auto;
-}
-
+/* ============ Philosophy magazine card ============ */
 .philosophy-card {
-  padding: 36px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(124, 78, 153, 0.12);
+  box-shadow: 0 30px 80px -50px rgba(90, 52, 114, 0.45);
 }
 
-.about-card-icon {
-  margin-bottom: 16px;
+.philosophy-photo {
+  position: relative;
+  margin: 0;
+  min-height: 360px;
+  overflow: hidden;
 }
 
-.about-card-title {
-  font-size: 1.35rem;
+.philosophy-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 8s ease-out;
+}
+
+.philosophy-card:hover .philosophy-photo img {
+  transform: scale(1.08);
+}
+
+.philosophy-photo-glow {
+  position: absolute;
+  inset: auto -10% -25% auto;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(178, 124, 217, 0.45), transparent 70%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.philosophy-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 55%, rgba(20, 16, 32, 0.4) 100%),
+    linear-gradient(120deg, transparent 60%, rgba(124, 78, 153, 0.18) 100%);
+  pointer-events: none;
+}
+
+.philosophy-photo-meta {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(20, 16, 32, 0.55);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.philosophy-content {
+  padding: 44px 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.philosophy-eyebrow {
+  align-self: flex-start;
+}
+
+.philosophy-title {
+  font-size: 1.6rem;
   font-weight: 700;
   color: rgb(var(--v-theme-textPrimary));
-  margin-bottom: 14px;
-}
-
-.about-card-text {
-  color: rgb(var(--v-theme-textSecondary));
-  line-height: 1.85;
   margin: 0;
+  line-height: 1.35;
 }
 
+.philosophy-text {
+  color: rgb(var(--v-theme-textSecondary));
+  line-height: 1.9;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.philosophy-quote {
+  position: relative;
+  padding: 18px 22px 18px 56px;
+  background: linear-gradient(135deg, rgba(124, 78, 153, 0.07), rgba(204, 156, 216, 0.12));
+  border-left: 3px solid rgb(var(--v-theme-primary));
+  border-radius: 0 14px 14px 0;
+  color: rgb(var(--v-theme-primaryDeep));
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 12px;
+}
+
+.philosophy-quote-icon {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  color: rgba(124, 78, 153, 0.6);
+}
+
+/* ============ Pillars ============ */
 .pillars-block {
   margin-top: 56px;
   padding: 36px 32px;
   border-radius: 22px;
   background: linear-gradient(135deg, rgba(124, 78, 153, 0.05), rgba(204, 156, 216, 0.08));
   border: 1px solid rgba(124, 78, 153, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillars-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .pillars-title {
@@ -114,7 +252,24 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   color: rgb(var(--v-theme-primaryDeep));
-  margin-bottom: 24px;
+  margin: 0;
+}
+
+.pillars-accent {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(204, 156, 216, 0.4);
+  box-shadow: 0 12px 26px -16px rgba(90, 52, 114, 0.6);
+  flex-shrink: 0;
+}
+
+.pillars-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .pillars-grid {
@@ -155,12 +310,20 @@
 }
 
 @media (max-width: 960px) {
-  .philosophy-art { max-width: 280px; }
+  .philosophy-card {
+    grid-template-columns: 1fr;
+  }
+  .philosophy-photo {
+    min-height: 280px;
+  }
+  .philosophy-content {
+    padding: 32px 28px 32px;
+  }
 }
 
 @media (max-width: 720px) {
   .pillars-grid { grid-template-columns: 1fr; }
+  .pillars-accent { width: 64px; height: 64px; }
   .about-section { padding: 80px 0; }
-  .philosophy-card { padding: 28px; }
 }
 </style>

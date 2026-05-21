@@ -16,8 +16,8 @@
       "consultation": "預約 30 分鐘諮詢"
     },
     "trustBadges": {
-      "ceh": "EC-Council CEH 資安專業",
-      "enterprise": "企業級 AI 導入顧問",
+      "ceh": "資安合規性導入顧問",
+      "enterprise": "AI 知識庫導入顧問",
       "fullstack": "全端工程與系統整合"
     },
     "footer": {
@@ -47,7 +47,7 @@
       "servicesTitle": "從 AI 到網頁，端到端的工程能力",
       "servicesSubtitle": "我們將複雜技術拆解為可執行、可驗證、可交付的企業方案，覆蓋從前端體驗到資安合規的完整光譜。",
       "casesEyebrow": "CASE STUDIES",
-      "casesTitle": "以成果說話的客戶案例",
+      "casesTitle": "客戶案例",
       "casesSubtitle": "從資料治理到流量增長、從資安合規到 AI 內容商業化，每個案例都對應可被量化的商業價值。",
       "aboutEyebrow": "ABOUT US",
       "aboutTitle": "為什麼選擇 Alyssum",
@@ -65,8 +65,8 @@
         "tags": ["LLM Ops", "Data Pipeline"]
       },
       "aiConsulting": {
-        "title": "AI 顧問、培訓與資安合規",
-        "subtitle": "AI Consulting, Training & Security",
+        "title": "AI 與資安合規培訓、顧問服務",
+        "subtitle": "AI & Security Compliance Training",
         "value": "從 AI 生產力工作坊、企業資安意識訓練，到 CEH 認證顧問執行的風險評估與系統加固，涵蓋 TWGCB / FCB / CIS 等稽核要求，協助企業在風險可控下落地 AI 與資安治理。",
         "audience": "欲建立內部 AI 能力，並重視法遵與關鍵基礎設施安全的企業",
         "tags": ["CEH", "TWGCB", "FCB", "CIS"]
@@ -125,7 +125,7 @@
         "metrics": {
           "baselines": { "value": "3", "label": "通過合規基準" },
           "systems": { "value": "RHEL / SLES / AIX", "label": "支援系統" },
-          "audit": { "value": "100%", "label": "稽核通過率" }
+          "audit": { "value": "CEH", "label": "認證顧問執行" }
         }
       },
       "case4": {
@@ -159,6 +159,7 @@
     "philosophyTitle": "Alyssum 命名哲學",
     "philosophyDescription": "Alyssum 香雪球象徵細緻、純淨且群聚綻放的力量。我們相信軟體工程不只追求效率，更應兼具美感、秩序與對人的理解 — 像一片精緻盛開的花海，讓每一個細節都被溫柔對待。",
     "philosophyImageAlt": "盛開的香雪球花叢",
+    "philosophyImageCredit": "Photo by Aleksandr Kadykov on Unsplash",
     "pillarsTitle": "三大工程信念",
     "pillars": {
       "elegant": {
