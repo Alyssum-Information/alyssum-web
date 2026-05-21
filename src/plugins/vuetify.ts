@@ -4,13 +4,10 @@
  * Framework documentation: https://vuetifyjs.com`
  */
 
-// Composables
 import { createVuetify } from 'vuetify'
-// Styles
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
-// https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   defaults: {
     VBtn: {
@@ -27,17 +24,23 @@ export default createVuetify({
       alyssumCustomTheme: {
         dark: false,
         colors: {
-          background: '#FFFFFF',
-          surface: '#FDFBFF',
+          background: '#F7F4FB',
+          surface: '#FFFFFF',
+          surfaceMuted: '#F1ECF7',
+          surfaceDark: '#15121E',
           primary: '#7C4E99',
+          primaryDeep: '#5A3472',
           secondary: '#CC9CD8',
-          accent: '#5A3472',
+          accent: '#B27CD9',
+          highlight: '#E9DAFF',
           error: '#D32F2F',
           info: '#1976D2',
           success: '#388E3C',
           warning: '#F57C00',
           textPrimary: '#2C2530',
           textSecondary: '#625766',
+          textOnDark: '#F6F1FB',
+          textOnDarkMuted: '#B6A8C7',
         },
       },
     },

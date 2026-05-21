@@ -4,9 +4,9 @@ import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { siteUrl } from '@/config/site'
 
-type PageKey = 'home' | 'services' | 'cases' | 'about' | 'contact'
+type PageKey = 'home'
 
-export function usePageHead (page: PageKey) {
+export function usePageHead (page: PageKey = 'home') {
   const { t } = useI18n()
   const route = useRoute()
 
@@ -18,30 +18,12 @@ export function usePageHead (page: PageKey) {
   useHead({
     title,
     meta: [
-      {
-        name: 'description',
-        content: description,
-      },
-      {
-        property: 'og:title',
-        content: title,
-      },
-      {
-        property: 'og:description',
-        content: description,
-      },
-      {
-        property: 'og:image',
-        content: image,
-      },
-      {
-        property: 'og:url',
-        content: pageUrl,
-      },
-      {
-        property: 'og:type',
-        content: 'website',
-      },
+      { name: 'description', content: description },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: image },
+      { property: 'og:url', content: pageUrl },
+      { property: 'og:type', content: 'website' },
     ],
   })
 }

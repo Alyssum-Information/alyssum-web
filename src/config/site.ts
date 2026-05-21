@@ -4,3 +4,5 @@ export const consultationFormUrl
 export const siteUrl = import.meta.env.VITE_SITE_URL || 'https://alyssum.com.tw'
 
 export const gtmId = import.meta.env.VITE_GTM_ID || ''
+
+export const githubUrl = 'https://github.com/Alyssum-Information'

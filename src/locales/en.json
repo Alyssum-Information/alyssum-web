@@ -1,0 +1,200 @@
+{
+  "site": {
+    "name": "Alyssum Information Co., Ltd.",
+    "shortName": "Alyssum",
+    "tagline": "Where Sophisticated Technology Meets Elegant Engineering.",
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "cases": "Case Studies",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": {
+      "bookDiagnosis": "Book Free AI Diagnosis",
+      "exploreCases": "Explore Cases",
+      "consultation": "Book a 30-min Consultation"
+    },
+    "trustBadges": {
+      "ceh": "EC-Council CEH Certified",
+      "enterprise": "Enterprise AI Advisory",
+      "fullstack": "Full-stack Engineering"
+    },
+    "footer": {
+      "description": "We help enterprises adopt AI, security governance, and scalable digital systems — with elegance and trust at the core.",
+      "copyright": "© {year} Alyssum Information Co., Ltd. All rights reserved.",
+      "companyInfo": "Company",
+      "taxId": "Tax ID",
+      "address": "Address",
+      "contactPerson": "Contact",
+      "navigation": "Navigation"
+    },
+    "language": {
+      "zh": "繁體中文",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "ENTERPRISE TECHNOLOGY PARTNER",
+      "titleLine1": "Where Sophisticated Technology",
+      "titleLine2": "Meets Elegant Engineering.",
+      "subtitle": "Tailored enterprise AI knowledge bases, consulting & security compliance, commercial systems & web development, plus AI voice and image generation — turning technology into measurable business outcomes.",
+      "scrollHint": "Scroll to explore"
+    },
+    "sections": {
+      "servicesEyebrow": "CORE SERVICES",
+      "servicesTitle": "End-to-end engineering, from AI to the web",
+      "servicesSubtitle": "We translate complex technology into executable, verifiable, and deliverable enterprise solutions — across the full spectrum from front-end experience to security compliance.",
+      "casesEyebrow": "CASE STUDIES",
+      "casesTitle": "Client outcomes that speak for themselves",
+      "casesSubtitle": "From data governance to traffic growth, from compliance to AI-driven content commercialization — every case maps to quantifiable value.",
+      "aboutEyebrow": "ABOUT US",
+      "aboutTitle": "Why teams choose Alyssum",
+      "contactEyebrow": "GET IN TOUCH",
+      "contactTitle": "Ready to start the next step?"
+    }
+  },
+  "services": {
+    "items": {
+      "rag": {
+        "title": "Enterprise AI Knowledge Base",
+        "subtitle": "RAG & LLM Integration",
+        "value": "On-premise or secure-cloud LLM integration that protects sensitive data, reduces hallucinations, and accelerates internal knowledge flow.",
+        "audience": "SMBs and academic / research institutions",
+        "tags": ["LLM Ops", "Data Pipeline"]
+      },
+      "aiConsulting": {
+        "title": "AI Consulting, Training & Security",
+        "subtitle": "Adoption & Compliance",
+        "value": "From AI productivity workshops and enterprise security-awareness training to CEH-led risk assessments and system hardening aligned with TWGCB / FCB / CIS audit standards.",
+        "audience": "Teams building AI capability while staying compliant",
+        "tags": ["CEH", "TWGCB", "FCB", "CIS"]
+      },
+      "productDev": {
+        "title": "Commercial Systems & Web Development",
+        "subtitle": "Backend, Frontend & Brand",
+        "value": "Brand strategy, UI/UX, technical SEO and high-performance frontend, plus scalable backend architectures, data models and operational dashboards — from MVP to enterprise-grade deployment.",
+        "audience": "Companies needing custom platforms or conversion-focused websites",
+        "tags": ["TypeScript", "Node.js", "Vue 3", "Vite", "Core Web Vitals"]
+      },
+      "media": {
+        "title": "AI Voice Synthesis & Image Generation",
+        "subtitle": "Generative Media",
+        "value": "Custom voice synthesis for premium audiobooks plus an AI-assisted art pipeline for promotional assets, character variants, and brand creative.",
+        "audience": "Creators, publishers, marketing and brand teams",
+        "tags": ["Voice Cloning", "Stable Diffusion", "ComfyUI", "Content Pipeline"]
+      }
+    }
+  },
+  "cases": {
+    "scope": "Scope",
+    "solution": "Our Solution",
+    "impact": "Business Impact",
+    "items": {
+      "case1": {
+        "title": "Large Educational Institution | Automated Scraping & AI Knowledge Base",
+        "industry": "Education / Public Sector",
+        "scope": "Catalog ~100,000 scattered web pages and documents across legacy systems and connect them to an LLM-backed knowledge base.",
+        "solution": "Enterprise-grade scraper + ingestion pipeline that lists, crawls and audits assets, converting PDF/DOCX/XLSX/HTML into a unified, LLM-ready format.",
+        "impact": "Mapped the institution's full digital footprint and turned unstructured docs into a secure, production-ready AI foundation.",
+        "metrics": {
+          "docs": { "value": "100K+", "label": "Documents consolidated" },
+          "formats": { "value": "10+", "label": "File formats supported" },
+          "automation": { "value": "95%", "label": "Pipeline automation" }
+        }
+      },
+      "case2": {
+        "title": "Gaming Strategy Platform | SEO #1 & AdSense Monetization",
+        "industry": "Media / Monetization",
+        "scope": "Build sustainable organic growth and monetization for highly competitive keywords.",
+        "solution": "Technical SEO: Core Web Vitals, semantic HTML, schema markup, and mobile-first responsive layout aligned to Google ranking signals.",
+        "impact": "Reached #1 Google organic ranking and passed AdSense approval for a stable passive revenue stream.",
+        "metrics": {
+          "rank": { "value": "#1", "label": "Google organic" },
+          "cwv": { "value": "100", "label": "Core Web Vitals" },
+          "adsense": { "value": "✓", "label": "AdSense approved" }
+        }
+      },
+      "case3": {
+        "title": "Infrastructure & Security | Government & Financial OS Compliance",
+        "industry": "Finance / Government",
+        "scope": "Hardening, baselining and security assessment for RHEL, SLES, IBM AIX and other mission-critical systems.",
+        "solution": "Blueprints aligned to TWGCB, FCB, and CIS Benchmarks — covering configuration governance, vulnerability management, and audit readiness.",
+        "impact": "Materially reduced risk and helped clients pass financial and institutional third-party audits.",
+        "metrics": {
+          "baselines": { "value": "3", "label": "Baselines passed" },
+          "systems": { "value": "RHEL / SLES / AIX", "label": "Systems covered" },
+          "audit": { "value": "100%", "label": "Audit pass rate" }
+        }
+      },
+      "case4": {
+        "title": "AI Multimedia | Custom-Voice Audiobooks & Mobile Game Art",
+        "industry": "Creative / Marketing",
+        "scope": "Support commercial content production with AI generative tech — validating market viability at scale.",
+        "solution": "Custom voice synthesis for premium audiobooks plus an AI-assisted art pipeline for mobile game promotional assets and character variants.",
+        "impact": "Audiobook hit #1 bestseller; creative production cost and cycle time dropped sharply.",
+        "metrics": {
+          "bestseller": { "value": "#1", "label": "Bestseller chart" },
+          "cost": { "value": "-60%", "label": "Production cost" },
+          "cycle": { "value": "3×", "label": "Delivery speed" }
+        }
+      }
+    },
+    "demo": {
+      "title": "Interactive performance demo",
+      "subtitle": "This page is part of our portfolio — try the toggle and see Core Web Vitals shift under different engineering strategies.",
+      "before": "Unoptimized",
+      "after": "Alyssum-engineered",
+      "metric1": "LCP — Largest Contentful Paint",
+      "metric2": "INP — Interaction to Next Paint",
+      "metric3": "CLS — Cumulative Layout Shift",
+      "metric4": "Lighthouse score",
+      "toggleOn": "Apply Alyssum optimizations",
+      "toggleOff": "Revert to unoptimized",
+      "tip": "(Tip: click the toggle to see the difference)"
+    }
+  },
+  "about": {
+    "philosophyTitle": "The Alyssum philosophy",
+    "philosophyDescription": "Alyssum is a tiny flower that blooms in clusters — fragrant, delicate, and quietly powerful. We believe great software shouldn't just be efficient; it should be beautiful, orderly, and deeply human — like a meadow in bloom, every detail tended with care.",
+    "philosophyImageAlt": "A cluster of blooming alyssum flowers",
+    "pillarsTitle": "Three engineering beliefs",
+    "pillars": {
+      "elegant": {
+        "title": "Elegant",
+        "description": "We turn cold, mechanical tech into clear, readable, evolvable engineering."
+      },
+      "simple": {
+        "title": "Simple",
+        "description": "No complexity for its own sake — every decision maps to verifiable business value."
+      },
+      "trustworthy": {
+        "title": "Trustworthy",
+        "description": "Security expertise and transparent communication build trust that lasts."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Free 30-min AI & Security readiness consultation",
+    "description": "Drop us your needs via the Google form below — we'll follow up with a recommended direction and initial implementation path.",
+    "openForm": "Open the Google form",
+    "companyInfoTitle": "Company information",
+    "company": {
+      "name": "Alyssum Information Co., Ltd.",
+      "nameEn": "Alyssum Information Co., Ltd.",
+      "taxId": "90350386",
+      "address": "No. 128-1, Sec. 4, Xinhai Rd., Wenshan Dist., Taipei City, Taiwan",
+      "contactName": "Kevin Ju (朱凱麟)",
+      "contactTitle": "Project Manager"
+    }
+  },
+  "seo": {
+    "defaultOgImage": "og-image.webp",
+    "home": {
+      "title": "Alyssum Information | Enterprise AI, Security & Web Engineering",
+      "description": "Knowledge base integration, AI consulting & security compliance, commercial systems & web development, and AI voice / image generation — measurable digital transformation outcomes."
+    }
+  }
+}

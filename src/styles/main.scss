@@ -1,7 +1,14 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Noto Sans TC', 'Inter', system-ui, -apple-system, sans-serif;
   color: rgb(var(--v-theme-textPrimary));
-  line-height: 1.6;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #app {
@@ -9,5 +16,180 @@ body {
 }
 
 .page-shell {
-  background: linear-gradient(180deg, #ffffff 0%, #fdfbff 100%);
+  background: rgb(var(--v-theme-background));
+}
+
+/* ============ Backgrounds / decorative ============ */
+.gradient-mesh {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.gradient-mesh::before,
+.gradient-mesh::after {
+  content: '';
+  position: absolute;
+  inset: auto;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.55;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.gradient-mesh::before {
+  top: -160px;
+  left: -120px;
+  background: radial-gradient(circle at 30% 30%, #CC9CD8, transparent 60%);
+}
+
+.gradient-mesh::after {
+  bottom: -200px;
+  right: -160px;
+  background: radial-gradient(circle at 70% 70%, #7C4E99, transparent 65%);
+  opacity: 0.4;
+}
+
+.dark-section {
+  background:
+    radial-gradient(1200px 600px at 90% -10%, rgba(178, 124, 217, 0.25), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(124, 78, 153, 0.35), transparent 60%),
+    linear-gradient(160deg, #15121E 0%, #1F1830 60%, #2A1B47 100%);
+  color: rgb(var(--v-theme-textOnDark));
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-section .text-textPrimary {
+  color: rgb(var(--v-theme-textOnDark)) !important;
+}
+
+.dark-section .text-textSecondary {
+  color: rgb(var(--v-theme-textOnDarkMuted)) !important;
+}
+
+.dark-section .grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  pointer-events: none;
+}
+
+/* ============ Glass / elevation cards ============ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(124, 78, 153, 0.12);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 320ms;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -28px rgba(90, 52, 114, 0.45);
+  border-color: rgba(124, 78, 153, 0.3);
+}
+
+.dark-section .glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgb(var(--v-theme-textOnDark));
+}
+
+.dark-section .glass-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(204, 156, 216, 0.35);
+}
+
+/* ============ Section headings ============ */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(124, 78, 153, 0.12), rgba(204, 156, 216, 0.18));
+  color: rgb(var(--v-theme-primary));
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dark-section .section-eyebrow {
+  background: rgba(204, 156, 216, 0.12);
+  color: #E9DAFF;
+}
+
+.section-title-gradient {
+  background: linear-gradient(120deg, #7C4E99 0%, #B27CD9 60%, #CC9CD8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============ Anchored scroll offset ============ */
+section[data-anchor] {
+  scroll-margin-top: 96px;
+}
+
+/* ============ Animated stat numbers ============ */
+.stat-number {
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============ Reveal on scroll ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease-out, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============ Floating decorative orbs ============ */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ Buttons polish ============ */
+.v-btn.v-btn--variant-flat,
+.v-btn.v-btn--variant-elevated {
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+/* ============ Service tech chip ============ */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 78, 153, 0.08);
+  color: rgb(var(--v-theme-primaryDeep));
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid rgba(124, 78, 153, 0.18);
+}
+
+.dark-section .tech-chip {
+  background: rgba(204, 156, 216, 0.1);
+  color: #E9DAFF;
+  border-color: rgba(204, 156, 216, 0.28);
 }

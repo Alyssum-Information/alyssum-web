@@ -1,20 +1,22 @@
 /**
  * router/index.ts
  *
- * Manual routes for ./src/pages/*.vue
+ * Single-page experience with smooth-scroll anchors.
  */
 
-// Composables
 import { createRouter, createWebHashHistory } from 'vue-router'
-import AboutPage from '@/pages/AboutPage.vue'
-import CasesPage from '@/pages/CasesPage.vue'
-import ContactPage from '@/pages/ContactPage.vue'
 import HomePage from '@/pages/index.vue'
-import ServicesPage from '@/pages/ServicesPage.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  scrollBehavior () {
+  scrollBehavior (to, _from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) {
+      const el = document.querySelector(to.hash)
+      if (el) {
+        return { el: to.hash, top: 80, behavior: 'smooth' }
+      }
+    }
     return { top: 0 }
   },
   routes: [
@@ -24,24 +26,8 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: '/services',
-      name: 'services',
-      component: ServicesPage,
-    },
-    {
-      path: '/cases',
-      name: 'cases',
-      component: CasesPage,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutPage,
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: ContactPage,
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
     },
   ],
 })
